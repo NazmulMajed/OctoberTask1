@@ -1,25 +1,241 @@
-/* Nike React UI CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Futura', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff9f4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container img {
+  width: 150px;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #fa804c;
+}
+
+/* Banner Section */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.bannercontent img {
+  max-width: 50%;
+  height: auto;
+}
+
+.content {
+  max-width: 45%;
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.cart-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* Shoe Section */
+h3 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.casual-section,.formal-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding:  20px;
+}
+
+.shoe.section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+}
+
+.imgshoes img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.shoe.section h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.shoe.section p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.price-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.price-button h2 span {
+  color: #fa804c;
+}
+
+.price-button button {
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.price-button button:hover {
+  background-color: #0056b3;
+}
+
+/* Info Section */
+.main-function {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.info.section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info-item img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.info-item h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Market Image */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-section {
+      flex-direction: column;
+      text-align: center;
   }
-  
-  button {
-    background-color: #111;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    transition: all 0.3s ease;
+
+  .bannercontent img {
+      max-width: 100%;
   }
-  
-  button:hover {
-    background-color: #ff3b30;
+
+  .content {
+      max-width: 100%;
+      margin-top: 20px;
   }
-  
-  h1, h2, h3 {
-    font-weight: bold;
+
+  .shoe.section {
+      width: 100%;
   }
-  
+}
